@@ -106,11 +106,17 @@ function App() {
   const [search, setSearch] = useState('');
   const qrPricesSnapshot = useRef(null);
 
-  const visibleProducts = products.filter(product => {
-    const term = search.trim().toLocaleLowerCase();
-    return !term || [product.nameEn, product.nameTa, product.category, product.code]
-      .some(value => String(value || '').toLocaleLowerCase().includes(term));
-  });
+  const visibleProducts = products
+    .filter(product => {
+      const term = search.trim().toLocaleLowerCase();
+      return !term || [product.nameEn, product.nameTa, product.category, product.code]
+        .some(value => String(value || '').toLocaleLowerCase().includes(term));
+    })
+    .sort((a, b) => {
+      const aIsPickle = String(a.category || '').toLocaleLowerCase() === 'pickle';
+      const bIsPickle = String(b.category || '').toLocaleLowerCase() === 'pickle';
+      return Number(aIsPickle) - Number(bIsPickle);
+    });
 
   useEffect(() => {
     if (!supabase) return;

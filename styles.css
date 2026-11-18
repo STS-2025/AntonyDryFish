@@ -115,3 +115,9 @@ a { color: inherit; text-decoration: none; }
   .product-grid { gap: 9px; }
   .product-title { font-size: 12px; }
 }
+
+.search-box input::-webkit-search-cancel-button,
+.search-box input::-webkit-search-decoration {
+  -webkit-appearance: none;
+  appearance: none;
+}
