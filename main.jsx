@@ -223,7 +223,7 @@ function App() {
           <span className="contact-item"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.2 7-12a7 7 0 1 0-14 0c0 5.8 7 12 7 12Z"/><circle cx="12" cy="9" r="2.5"/></svg>{SHOP_ADDRESS}</span>
           <a className="contact-item" href={`https://wa.me/${SHOP_PHONE.replace(/\D/g, '')}`}><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.5 11.7a8.3 8.3 0 0 1-12.3 7.2L3 20l1.2-5A8.3 8.3 0 1 1 20.5 11.7Z"/><path d="M8.6 8.1c.2-.4.4-.4.7-.4h.4c.2 0 .3.1.4.4l.7 1.6c.1.2 0 .4-.1.6l-.5.6c-.1.1-.2.3 0 .5.4.7 1 1.3 1.7 1.7.2.1.3.1.5-.1l.7-.8c.2-.2.4-.2.6-.1l1.5.7c.2.1.4.2.4.4 0 .2-.1 1-.6 1.4-.5.5-1.2.7-1.8.6-1.1-.2-2.4-.8-3.5-1.8-1.2-1.1-2-2.5-2.2-3.5-.2-.8.2-1.5.6-1.8Z"/></svg>WhatsApp: +91 {SHOP_PHONE}</a>
         </div>
-        <div className="footer-bottom">© {new Date().getFullYear()} {SHOP_NAME}</div>
+        <div className="footer-bottom">© {new Date().getFullYear()} {SHOP_NAME}. <span className='STS-link'>Designed by </span><a href='https://samudhratechsolutions.biz/' target='_blank'>Samudhra Tech Solutions</a></div>
       </div>
     </footer>
 

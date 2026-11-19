@@ -121,3 +121,7 @@ a { color: inherit; text-decoration: none; }
   -webkit-appearance: none;
   appearance: none;
 }
+
+.STS-link{
+  color: #4A8AD0;
+}
